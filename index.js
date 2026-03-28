@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // In-memory databases
-let users = []; 
+let users = [{id: 1, username: 'admin', pin: '1234'}]; 
 let transactions = [];
 
 // --- AUTH ROUTE (The PIN System) ---
