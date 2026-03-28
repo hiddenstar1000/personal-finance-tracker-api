@@ -10,6 +10,11 @@ app.use(express.json());
 
 const JWT_SECRET = 'hackathon-super-secret-key'; // Keep this safe in prod!
 
+// Add root level endpoint to identify API is running
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'Personal Finance Tracker API is up and running!' });
+});
+
 // In-memory databases
 let users = []; 
 let transactions = [];
